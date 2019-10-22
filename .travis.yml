@@ -13,3 +13,9 @@ script:
 - echo "Starting build!"
 - bundle exec jekyll build
 - echo "Finished build."
+jobs:
+  include:
+    - stage: build
+      script: script/build
+    - stage: testlinks
+      script: REPLACE-ME-WITH-HTML-PROOFER-SCRIPT
